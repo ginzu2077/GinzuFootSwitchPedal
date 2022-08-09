@@ -1,5 +1,7 @@
 /* 
- * FootSwitchPedalCode by ginzu
+ * FootSwitchPedalCode by ginzu - 2022/08/09
+ * Use of the keyboard Library to simulate Left and Right pedals (pin2 and pin 3)
+ * Use of the mouse Library to add the middle click button on pin4 (do not use)
  */
  
 #include "Keyboard.h"
@@ -49,7 +51,8 @@ void loop() {
     else {
     Keyboard.release(215);
     }
-    
+
+   // Pedal other - Mouse middle click  
    if (pedalLeft2 == LOW) {
     Mouse.press(MOUSE_MIDDLE);
     delay(100);
